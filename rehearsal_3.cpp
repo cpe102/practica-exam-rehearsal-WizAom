@@ -1,6 +1,18 @@
 #include <iostream>
-
-//Write sumSqrt() here.
+#include<cmath>
+using namespace std;
+double sumSqrt(int N){
+    int i=1;
+    double ans=0;
+    if(N<=0){
+        return 0.00000; 
+    }
+    while(i<=N){
+        ans=ans+(1/sqrt(i));
+        i++;
+    }
+    return ans;
+}
 
 
 int main()
@@ -12,7 +24,8 @@ int main()
     double e = sumSqrt(1);
     double f = sumSqrt(0);
     double g = sumSqrt(-1);
-    
-    cout << a << "\n" << b << "\n" << c << "\n" << d << "\n" << e << "\n" << f << "\n" << g << "\n";
+    double h = sumSqrt(-5);
+    double i = sumSqrt(3);
+    cout << a << "\n" << b << "\n" << c << "\n" << d << "\n" << e << "\n" << f << "\n" << g << "\n" << h << "\n" << i << "\n";
 
 }
